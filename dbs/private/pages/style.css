@@ -1,0 +1,46 @@
+body{
+
+    background-color: #2e2d2d;
+}
+
+.left-bar{
+    background-color: aqua;
+    color: aquamarine;
+    float: left;
+    width: 200px;
+    height: 400px;
+    text-align: center;
+}
+.right-bar{
+    background-color: #1d1d1d;
+    float: right;
+    width: 200px;
+    height: 475px;
+    text-align: center;
+}
+.down-bar{
+    width: 1200px;
+    height: 150px;
+    margin-top: 100px;
+    align-items: center;
+    text-align: center;
+}
+.game{
+    direction: ltr;
+}
+.down-bar a::before{
+    color: black;
+    margin: 2px;
+}
+.down-bar a{
+    margin: 2px;
+}
+a{
+    color: darkgray;
+    text-decoration: solid;
+}
+a:hover{
+    transition: 0.5s ease-out;
+    color: #57c93f;
+    text-decoration: solid;
+}

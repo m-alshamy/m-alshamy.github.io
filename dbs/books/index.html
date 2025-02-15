@@ -1,0 +1,71 @@
+<html lang="ar">
+
+<head>
+        <title>مكتبتي</title>
+        <meta charset="UTF-8" />
+        <link rel="stylesheet" type="text/css" href="table.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <link rel="stylesheet" href="../../css/alert.css">
+        <h2>مكتبتي</h2>
+        <h3>MY Library</h3>
+        
+</head>
+
+<body>
+<div id="customAlert" class="custom-alert">
+    <div class="alert-icon"></div>
+    <div class="alert-message"></div>
+    <div class="alert-progress"></div> <!-- الخط السفلي (العداد) -->
+</div>
+<!-- مربع الإدخال المتقدم -->
+<input type="text" id="filterBox" placeholder="search here" oninput="filterFunction()">
+<button id='fullscreen-btn'>
+    <i class="fas fa-expand"></i> <!-- الأيقونة الافتراضية -->
+</button>
+<!-- المحتوى الذي يمكن البحث فيه -->
+<div class="table-wrapper">
+
+    <table class="fl-table">
+        <tbody>
+            <tr>
+                <td>ديني</td>
+                <td>الداء و الدواء - ابن القيم</td>
+            </tr>
+            <tr>
+                <td>ديني</td>
+                <td>صفقات رابحة - خالد ابو شادي</td>
+            </tr>
+            <tr>
+                <td>ديني</td>
+                <td>سياط القلوب - عائض القرني</td>
+            </tr>
+            <tr>
+                <td>ديني</td>
+                <td>زاد المعاد في هدي خير العباد - ابن القيم</td>
+            </tr>
+            <tr>
+                <td>روايات</td>
+                <td>الشوك و القرنفل</td>
+            </tr>
+            <tr>
+                <td>افكار بناءة</td>
+                <td>الطريقة السهلة - الان كار</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td><a href="">
+                <i class="fa-solid fa-download"></i></a></td>
+            </tr>
+        <tbody>
+    </table>
+</div>
+<script src="../../js/fullscreen.js"></script>
+<script src="../../js/alert.js"></script>
+<script src="script.js"></script>
+    </body>
+</html>

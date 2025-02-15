@@ -1,0 +1,418 @@
+<html lang="ar">
+
+<head>
+        <title>مواقع مفيدة</title>
+        <meta charset="UTF-8" />
+        <script src="script.js"></script>
+        <link rel="stylesheet" type="text/css" href="table.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <link rel="stylesheet" href="../../css/alert.css">
+        <h2>مواقع مفيدة</h2>
+        <h3>Useful websites</h3>
+</head>
+
+<body>
+<div id="customAlert" class="custom-alert">
+    <div class="alert-icon"></div>
+    <div class="alert-message"></div>
+    <div class="alert-progress"></div> <!-- الخط السفلي (العداد) -->
+</div>
+<!-- مربع الإدخال المتقدم -->
+<input type="text" id="filterBox" placeholder="search here" oninput="filterFunction()">
+<button id="fullscreen-btn" onclick="toggleFullscreen()">
+    <i class="fas fa-expand"></i> <!-- الأيقونة الافتراضية -->
+</button>
+
+<!-- المحتوى الذي يمكن البحث فيه -->
+
+<div class="table-wrapper">
+    <table class="fl-table">
+        <tbody>
+            <tr>
+                <td>labnol</td>
+                <td>labnol.org/internet/101-useful-websites/18078/</td>
+                <td>list</td>
+            </tr>
+            <tr>
+                <td>jitter</td>
+                <td>https://jitter.video/</td>
+                <td>video</td>
+            </tr>
+            <tr>
+                <td>medium</td>
+                <td>medium.com/demagsign/14-useful-websites-you-wish-you-knew-earlier-a7945e4f4fd8</td>
+                <td>list</td>
+            </tr>
+            <tr>
+                <td>saaswrites</td>
+                <td>https://www.saaswrites.com/useful-websites-on-the-internet</td>
+                <td>list</td>
+            </tr>
+            <tr>
+                <td>lochnase lake</td>
+                <td>atlasobscura.com/articles/tahoe-tessie</td>
+                <td>other</td>
+            </tr>
+            <tr>
+                <td>pirates</td>
+                <td>https://alshamy.itch.io/pirates</td>
+                <td>personal</td>
+            </tr>
+            <tr>
+                <td>Pcloud</td>
+                <td>https://www.pcloud.com/</td>
+                <td>Cloud</td>
+            </tr>
+            <tr>
+                <td>Media fire</td>
+                <td>https://www.mediafire.com/</td>
+                <td>Cloud</td>
+            </tr>
+            <tr>
+                <td>arabseed</td>
+                <td>https://arabseed.biz/</td>
+                <td>movies</td>
+            </tr>
+            <tr>
+                <td>arabseed 2</td>
+                <td>https://asd.rest/</td>
+                <td>movies</td>
+            </tr>
+            <tr>
+                <td>my ramses</td>
+                <td>https://ramses-dg.github.io/</td>
+                <td>personal</td>
+            </tr>
+            <tr>
+                <td>arabseed 3</td>
+                <td>https://arabseed.show/</td>
+                <td>movies</td>
+            </tr>
+            <tr>
+                <td>wallpaper flare</td>
+                <td>https://www.wallpaperflare.com/</td>
+                <td>images & database</td>
+            </tr>
+            <tr>
+                <td>techspot</td>
+                <td>techspot.com/article/2368-portable-apps-toolbox/</td>
+                <td>apps</td>
+            </tr>
+            <tr>
+                <td>poly pizza</td>
+                <td>https://poly.pizza/</td>
+                <td>game assets & 3d</td>
+            </tr>
+            <tr>
+                <td>blender kit</td>
+                <td>https://www.blenderkit.com/</td>
+                <td>3d</td>
+            </tr>
+            <tr>
+                <td>biggest maps</td>
+                <td>https://gaminggorilla.com/biggest-open-world-maps/</td>
+                <td>other</td>
+            </tr>
+            <tr>
+                <td>gdquest</td>
+                <td>https://gdquest.itch.io/godot-demos-2022-edition</td>
+                <td>game assets</td>
+            </tr>
+            <tr>
+                <td>craftpix</td>
+                <td>https://craftpix.net/</td>
+                <td>game assets & 3d</td>
+            </tr>
+            <tr>
+                <td>kenney</td>
+                <td>https://kenney.nl/</td>
+                <td>game assets</td>
+            </tr>
+            <tr>
+                <td>gamedev market</td>
+                <td>https://www.gamedevmarket.net/</td>
+                <td>game assets</td>
+            </tr>
+            <tr>
+                <td>hotpot.ai</td>
+                <td>https://hotpot.ai/free-game-assets</td>
+                <td>game assets & ai</td>
+            </tr>
+            <tr>
+                <td>creativetrio</td>
+                <td>creativetrio.art/2024/04/22/stylized-low-poly-trees-pack-02/</td>
+                <td>game assets</td>
+            </tr>
+            <tr>
+                <td>creativetrio</td>
+                <td>https://creativetrio.art/</td>
+                <td>game assets & 3d</td>
+            </tr>
+            <tr>
+                <td>crotorrents</td>
+                <td>https://crotorrents.com/</td>
+                <td>torrents</td>
+            </tr>
+            <tr>
+                <td>torgamez</td>
+                <td>https://torgamez.com/</td>
+                <td>torrents</td>
+            </tr>
+            <tr>
+                <td>pelock</td>
+                <td>pelock.com/products/steganography-online-codec</td>
+                <td>services</td>
+            </tr>
+            <tr>
+                <td>bgjar</td>
+                <td>https://bgjar.com/</td>
+                <td>services & images</td>
+            </tr>
+            <tr>
+                <td>imgbb</td>
+                <td>https://imgbb.com/</td>
+                <td>upload & images</td>
+            </tr>
+            <tr>
+                <td>codepen</td>
+                <td>https://codepen.io/</td>
+                <td>coding</td>
+            </tr>
+            <tr>
+                <td>clipdrop</td>
+                <td>https://clipdrop.co/</td>
+                <td>images</td>
+            </tr>
+            <tr>
+                <td>soap2dayhd</td>
+                <td>https://ww7.soap2dayhd.co/</td>
+                <td>cartoons</td>
+            </tr>
+            <tr>
+                <td>gogoanimes</td>
+                <td>https://www6.gogoanimes.fi/</td>
+                <td>cartoons</td>
+            </tr>
+            <tr>
+                <td>onthisday</td>
+                <td>https://www.onthisday.com</td>
+                <td>database</td>
+            </tr>
+            <tr>
+                <td>Tor browser - 2</td>
+                <td>https://tor.calyxinstitute.org/</td>
+                <td>services</td>
+            </tr>
+            <tr>
+                <td>poster database</td>
+                <td>https://theposterdb.com</td>
+                <td>images & database</td>
+            </tr>
+            <tr>
+                <td>poster database - ar</td>
+                <td>https://www.themoviedb.org</td>
+                <td>images & database</td>
+            </tr>
+            <tr>
+                <td>wallpaper flare</td>
+                <td>https://www.wallpaperflare.com/</td>
+                <td>images & database</td>
+            </tr>
+            <tr>
+                <td>openlibrary</td>
+                <td>https://openlibrary.org/</td>
+                <td>library</td>
+            </tr>
+            <tr>
+                <td>the secret</td>
+                <td>https://thesecretatreasurehunt.com/</td>
+                <td>other</td>
+            </tr>
+            <tr>
+                <td>librarything</td>
+                <td>https://www.librarything.com/work/1207287</td>
+                <td>library</td>
+            </tr>
+            <tr>
+                <td>internet archive</td>
+                <td>https://archive.org/</td>
+                <td>library</td>
+            </tr>
+            <tr>
+                <td>12treasures</td>
+                <td>https://12treasures.com/</td>
+                <td>other</td>
+            </tr>
+            <tr>
+                <td>imagetostl</td>
+                <td>https://imagetostl.com/convert</td>
+                <td>services & images</td>
+            </tr>
+            <tr>
+                <td>cults3d</td>
+                <td>https://cults3d.com/en</td>
+                <td>3d</td>
+            </tr>
+            <tr>
+                <td>convertio</td>
+                <td>https://convertio.co/</td>
+                <td>services</td>
+            </tr>
+            <tr>
+                <td>m-elshami.github.io</td>
+                <td>https://m-elshami.github.io/</td>
+                <td>personal</td>
+            </tr>
+            <tr>
+                <td>stardiima</td>
+                <td>https://e.stardiima.top/</td>
+                <td>cartoons</td>
+            </tr>
+            <tr>
+                <td>arabic cartoons</td>
+                <td>https://www.linkbox.to/a/s/kWZPbBA</td>
+                <td>cartoons</td>
+            </tr>
+            <tr>
+                <td>tickcounter</td>
+                <td>https://www.tickcounter.com/</td>
+                <td>services</td>
+            </tr>
+            <tr>
+                <td>saaid alfawaed</td>
+                <td>http://saaid.org/</td>
+                <td>islamic</td>
+            </tr>
+            <tr>
+                <td>elshami.tiiny.site</td>
+                <td>https://elshami.tiiny.site/</td>
+                <td>personal</td>
+            </tr>
+            <tr>
+                <td>elshami.dorik.io</td>
+                <td>https://elshami.dorik.io/</td>
+                <td>personal</td>
+            </tr>
+            <tr>
+                <td>alukah web</td>
+                <td>https://www.alukah.net/</td>
+                <td>islamic</td>
+            </tr>
+            <tr>
+                <td>albetaqa society</td>
+                <td>https://www.albetaqa.site/lang/arb/</td>
+                <td>islamic</td>
+            </tr>
+            <tr>
+                <td>carrd.co</td>
+                <td>https://carrd.co/</td>
+                <td>web dev</td>
+            </tr>
+            <tr>
+                <td>drv.tw</td>
+                <td>https://drv.tw/</td>
+                <td>web dev</td>
+            </tr>
+            <tr>
+                <td>table-generator</td>
+                <td>https://www.table-generator.de/</td>
+                <td>services</td>
+            </tr>
+            <tr>
+                <td>undraw</td>
+                <td>https://undraw.co/illustrations</td>
+                <td>icons</td>
+            </tr>
+            <tr>
+                <td>toools.design</td>
+                <td>https://www.toools.design/</td>
+                <td>services</td>
+            </tr>
+            <tr>
+                <td>loading.io</td>
+                <td>https://loading.io/</td>
+                <td>icons</td>
+            </tr>
+            <tr>
+                <td>autodraw</td>
+                <td>https://www.autodraw.com/</td>
+                <td>icons & images</td>
+            </tr>
+            <tr>
+                <td>meshy.ai</td>
+                <td>https://www.meshy.ai/</td>
+                <td>3d & ai</td>
+            </tr>
+            <tr>
+                <td>topai.tools</td>
+                <td>https://topai.tools/</td>
+                <td>ai</td>
+            </tr>
+            <tr>
+                <td>avaturn.me</td>
+                <td>https://avaturn.me/</td>
+                <td>3d & ai</td>
+            </tr>
+            <tr>
+                <td>savegameworld</td>
+                <td>https://www.savegameworld.com/</td>
+                <td>mods</td>
+            </tr>
+            <tr>
+                <td>nexusmods</td>
+                <td>https://www.nexusmods.com/</td>
+                <td>mods</td>
+            </tr>
+            <tr>
+                <td>pirate bay</td>
+                <td>https://www.pirateproxy-bay.com/</td>
+                <td>torrents</td>
+            </tr>
+            <tr>
+                <td>fitgirl-repacks</td>
+                <td>https://fitgirl-repacks.site/</td>
+                <td>torrents</td>
+            </tr>
+            <tr>
+                <td>murf.ai</td>
+                <td>https://murf.ai/</td>
+                <td>audio & ai</td>
+            </tr>
+            <tr>
+                <td>gemini</td>
+                <td>https://gemini.google.com/</td>
+                <td>ai</td>
+            </tr>
+            <tr>
+                <td>copilot</td>
+                <td>https://copilot.microsoft.com/</td>
+                <td>ai</td>
+            </tr>
+            <tr>
+                <td>cloudflare</td>
+                <td>https://www.cloudflare.com/</td>
+                <td>web dev</td>
+            </tr>
+            <tr>
+                <td>dorik</td>
+                <td>https://dorik.com/</td>
+                <td>web dev</td>
+            </tr>
+            <tr>
+                <td>tiiny.host</td>
+                <td>https://tiiny.host/</td>
+                <td>web dev</td>
+            </tr>
+            <tr>
+                <td>name</td>
+                <td></td>
+                <td>tag</td>
+            </tr>
+        <tbody>
+    </table>
+</div>
+        
+<script src="../../js/fullscreen.js"></script>
+<script src="../../js/alert.js"></script>
+    </body>
+</html>
