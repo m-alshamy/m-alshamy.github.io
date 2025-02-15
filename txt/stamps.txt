@@ -1,0 +1,4 @@
+<span class="stamp">proposal</span>
+<span class="stamp is-nope">secret</span>
+<span class="stamp is-approved">Approved</span>
+<span class="stamp is-draft">Draft</span>

@@ -1,0 +1,41 @@
+
+.stamp {
+	rotate: 15deg;
+	color: #555;
+	font-size: 3rem;
+	border: 0.25rem solid #555;
+	display: inline-block;
+	padding: 0.4rem 1rem;
+	margin-top: 6px;
+	text-align: center;
+	border-radius: 1rem;
+	background: rgb(0, 0, 0);
+	-webkit-mask-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/8399/grunge.png');
+  	-webkit-mask-size: 944px 604px;
+ 	mix-blend-mode: multiply;
+}
+
+.is-warn {
+  color: #ffffff;
+  border: 0.5rem double yellow;
+  font-size: small;
+  size: inherit;
+}
+.is-approved {
+	color: #ffffff;
+	border: 0.5rem double #0A9928;
+	font-size: small;
+	size: inherit;
+}
+.is-danger {
+	color: #ffffff;
+	border: 0.5rem double red;
+	font-size: small;
+	size: inherit;
+} 
+.is-draft {
+	color: #555;
+	border: 0.5rem double gray;
+	font-size: small;
+	size: inherit;
+}

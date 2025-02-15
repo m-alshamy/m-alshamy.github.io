@@ -1,0 +1,16 @@
+(function() {
+  var o = document.getElementById('protect-overlay');
+
+  o.getElementsByTagName('form')[0].onsubmit = function() {
+      // التحقق من كلمة المرور كما كان
+      if (this.answer.value === atob('M0xTSEFNSV9wd2Q=')) {
+        alert('تهانينا . كلمة مرور صحيحة');
+        o.style.display = "none";
+        sessionStorage.setItem('loginStatus', '1'); // حفظ حالة تسجيل الدخول الناجحة
+      } else {
+        alert('خطأ !');
+        window.location.reload();
+      }
+      return false;
+  };
+})();

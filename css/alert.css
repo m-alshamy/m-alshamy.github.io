@@ -1,0 +1,110 @@
+        /* Base Alert Styling */
+        .custom-alert{
+            position: fixed;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: white;
+            padding: 15px 30px;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            z-index: 9999; /* أعلى قيمة ممكنة */
+            display: none;
+            animation: slideIn 0.5s ease-out;
+            overflow: hidden;
+        }
+        /* Line Timer */
+        .custom-alert::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background-color: rgba(255, 255, 255, 0.5);
+            animation: lineTimer 3s linear forwards;
+        }
+        .custom-alert.alert-icon{
+            margin: 5px;
+        }
+        /* Keyframes for slide-in animation */
+        @keyframes slideIn {
+            from {
+                color: transparent;
+                top: -50px;
+                opacity: 0;
+            }
+            to {
+                top: 20px;
+                opacity: 1;
+            }
+        }
+        /* Customizable Alert Types */
+        .custom-alert.normal {
+            background-color: #e3f2fd;
+            color: #0d47a1;
+          }
+          
+          .custom-alert.success {
+            background-color: #e8f5e9;
+            color: #2e7d32;
+          }
+          
+          .custom-alert.error {
+            background-color: #ffebee;
+            color: #c62828;
+          }
+          
+          .custom-alert.warning {
+            background-color: #fff3e0;
+            color: #f57c00;
+          }
+          
+          .alert-progress {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            height: 3px;
+            background-color: currentColor;
+            width: 100%;
+            transition: width 3s linear;
+          }
+        /* Overlay Styling */
+        #protect-overlay {
+            overflow: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: black;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        #protect-overlay form {
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        #protect-overlay input[type="password"] {
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        #protect-overlay input[type="submit"] {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #protect-overlay input[type="submit"]:hover {
+            background-color: #45a049;
+        }

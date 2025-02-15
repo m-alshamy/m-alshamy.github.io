@@ -1,0 +1,8 @@
+		<!-- password overlay-->
+		<div id="protect-overlay" class="overlay">
+		<h3><hid>3LSHAMI_pwd</hid></h3>
+		<form action="">
+			<div id="customAlert" class="custom-alert"></div>
+			<button id="passok" type="submit">دخول</button><input id="passinput" name="answer" type="password" placeholder="كلمة المرور هنا"/>
+		</form>
+	    </div>

@@ -1,0 +1,22 @@
+button {
+  background-color: transparent;
+  color: #a2a9b1; /* لون الأيقونة */
+  border: none; /* إزالة الحدود */
+  width: 40px; /* عرض الزر */
+  height: 40px; /* ارتفاع الزر */
+  cursor: pointer; /* تغيير شكل المؤشر */
+  transition: transform 0.3s ease; /* تأثيرات انتقالية */
+}
+button{
+  margin-right: 10px;
+  margin-left: 10px;
+}
+/* تأثيرات عند المرور على الزر */
+button:hover {
+  transform: scale(1.1); /* تكبير الزر قليلاً */
+}
+
+/* تصميم الأيقونة */
+button i {
+  font-size: 20px; /* حجم الأيقونة */
+}
