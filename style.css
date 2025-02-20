@@ -322,6 +322,7 @@ div.articleRightInner {
 	font-size: 0.875em;
 	border-top: 1px solid #717071;
 	border-bottom: 1px solid #717071;
+	text-align: center;
 }
 .article p {
 	line-height: inherit;
