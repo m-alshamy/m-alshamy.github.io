@@ -199,10 +199,10 @@ a:hover {
 	position: absolute;
 }
 .sidebar h3 {
-	font-size: 0.75em;
+	font-size: 1em;
 	color: #999;
 	font-weight: normal;
-	margin: 0.5em 0 0 0;
+	margin: 2em 0 0 0;
 	padding: 0.25em 0;
 	cursor: default;
 	border: 0;
