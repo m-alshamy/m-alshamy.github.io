@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تنبيه هام</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: #1a1a1a;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            direction: rtl;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 100px auto;
+            padding: 30px;
+            background: #2a2a2a;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(255,0,0,0.3);
+        }
+
+        .warning-box {
+            border: 2px solid #ff4444;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+            background: #330000;
+        }
+
+        button {
+            padding: 10px 30px;
+            margin: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px;
+            transition: 0.3s;
+        }
+
+        #yesBtn {
+            background: #ff4444;
+            color: white;
+        }
+
+        #noBtn {
+            background: #44ff44;
+            color: #003300;
+        }
+
+        button:hover {
+            opacity: 0.8;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .logo {
+            font-size: 24px;
+            color: #ff4444;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">⚠️ موقع تحذيري ⚠️</div>
+        
+        <div class="warning-box">
+            <h2>❗ تنبيه هام لكل زائر ❗</h2>
+            <p>«هل تقر بأنك ستتحمل كل صورة فوق ظهرك يوم القيامة؟»</p>
+            <p>«هل تضمن أن تعيش حتى تنتهي؟»</p>
+        </div>
+
+        <div>
+            <button id="yesBtn" onclick="redirectToPunishment()">نعم</button>
+            <button id="noBtn" onclick="redirectToRepentance()">لا</button>
+        </div>
+    </div>
+
+    <script>
+        function redirectToPunishment() {
+            window.location.href = "https://example.com/عذاب-القبر"; // استبدل بالرابط المطلوب
+        }
+
+        function redirectToRepentance() {
+            window.location.href = "https://example.com/التوبة"; // استبدل بالرابط المطلوب
+        }
+    </script>
+</body>
+</html>
