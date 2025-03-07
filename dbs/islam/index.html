@@ -11,6 +11,11 @@
     <div id="sidebar">
         <input type="text" id="filterBox" placeholder="ابحث هنا" oninput="filterFunction()">
 
+    </div>
+    
+    
+<div id="sidebar">
+    <input type="text" id="filterBox" placeholder="ابحث هنا" oninput="filterFunction()">
         <button onclick=window.location.href='./?id=PLKd_OPEHWrqjsl4caUzMDTw9wxCZdBN5c';>معايشة الانبياء و الصالحين</button>
         <button onclick=window.location.href='./?id=PLKd_OPEHWrqhmm93S2cKCSeHcLgq8k12A';>معايشة الدار الاخرة</button>
         <button onclick=window.location.href='./?id=PL93xDPoSaGhHifxKzPOcR81lBAXv6MAbd';>خطب الشيخ محمود شعبان</button>
@@ -20,10 +25,89 @@
         <button onclick=window.location.href='./?id=PLlXQj2VGUTmfOrpzgytlcIlu38pQWh4UJ';>عالمغرب ٢ ايه المشكلة</button>
         <button onclick=window.location.href='./?id=PL1i_D1Vw3d5ON4r03awUn6gPbgpCgb9xl';>قصص الصحابة علاء حامد</button>
         <button onclick=window.location.href='./?id=PL1i_D1Vw3d5NuRQJy-bk_ptE227GOQnNo';>خطة رمضان علاء حامد</button>
-        <button onclick=window.location.href='./?id=';></button>
-        <button onclick=window.location.href='./?id=';></button>
-        <button onclick=window.location.href='./?id=';></button>
-    </div>
+        <button onclick="addNewItem()">إضافة عنصر جديد</button>
+</div>
+
+<!-- أضف Firebase SDK -->
+<script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/11.4.0/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.4.0/firebase-analytics.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyAnwrlJYLrnnFZKvwCLTOurOh7QEFxeeZQ",
+    authDomain: "islamiclist-39c35.firebaseapp.com",
+    projectId: "islamiclist-39c35",
+    storageBucket: "islamiclist-39c35.firebasestorage.app",
+    messagingSenderId: "566938957357",
+    appId: "1:566938957357:web:10fa09d807285f4dabaaa4",
+    measurementId: "G-MB2T07MPXR"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+</script>
+<script>
+// دالة لإنشاء عنصر جديد في واجهة المستخدم
+function createItemElement(itemName, playlistId) {
+    const button = document.createElement("button");
+    button.textContent = itemName;
+    button.onclick = () => {
+        window.location.href = `./?id=${playlistId}`;
+    };
+    return button;
+}
+
+// دالة لجلب البيانات وعرضها
+function loadItems() {
+    const sidebar = document.getElementById("sidebar");
+
+    database.ref('playlistItems').on('value', (snapshot) => {
+        const items = snapshot.val();
+        sidebar.innerHTML = `
+            <input type="text" id="filterBox" placeholder="ابحث هنا" oninput="filterFunction()">
+            <button onclick="window.location.href='./?id=PLKd_OPEHWrqjsl4caUzMDTw9wxCZdBN5c';">معايشة الانبياء و الصالحين</button>
+            <button onclick="window.location.href='./?id=PLKd_OPEHWrqhmm93S2cKCSeHcLgq8k12A';">معايشة الدار الاخرة</button>
+            <button onclick="addNewItem()">إضافة عنصر جديد</button>
+        `;
+
+        if (items) {
+            Object.keys(items).forEach((key) => {
+                const item = items[key];
+                const itemElement = createItemElement(item.itemName, item.playlistId);
+                sidebar.appendChild(itemElement);
+            });
+        }
+    });
+}
+
+// دالة لإضافة عنصر جديد
+function addNewItem() {
+    const itemName = prompt("أدخل اسم العنصر الجديد:");
+    const playlistId = prompt("أدخل معرف قائمة التشغيل:");
+
+    if (itemName && playlistId) {
+        database.ref('playlistItems').push({
+            itemName: itemName,
+            playlistId: playlistId
+        }).then(() => {
+            alert("تم حفظ العنصر بنجاح!");
+        }).catch((error) => {
+            alert("حدث خطأ أثناء الحفظ: " + error.message);
+        });
+    } else {
+        alert("الرجاء إدخال اسم العنصر ومعرف قائمة التشغيل.");
+    }
+}
+
+// تحميل العناصر عند فتح الصفحة
+window.onload = loadItems;
+</script>
     <div id="video-frame">
         <iframe width="200" height="100" id="video" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </div>
