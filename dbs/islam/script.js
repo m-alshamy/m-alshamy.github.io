@@ -37,6 +37,35 @@
                 alert('يرجى ملء جميع الحقول!');
             }
         }
+    // تهيئة Firebase
+    const firebaseConfig = {
+
+        apiKey: "AIzaSyAnwrlJYLrnnFZKvwCLTOurOh7QEFxeeZQ",
+    
+        authDomain: "islamiclist-39c35.firebaseapp.com",
+    
+        databaseURL: "https://islamiclist-39c35-default-rtdb.firebaseio.com",
+    
+        projectId: "islamiclist-39c35",
+    
+        storageBucket: "islamiclist-39c35.firebasestorage.app",
+    
+        messagingSenderId: "566938957357",
+    
+        appId: "1:566938957357:web:10fa09d807285f4dabaaa4",
+    
+        measurementId: "G-MB2T07MPXR"
+    
+        };
+    
+    
+        // Initialize Firebase
+    
+        const app = initializeApp(firebaseConfig);
+    
+        const analytics = getAnalytics(app);
+    
+
         function filterFunction() {
             var input, filter, content, txt, i;
             input = document.getElementById('filterBox');
