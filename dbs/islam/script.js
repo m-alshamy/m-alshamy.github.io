@@ -16,6 +16,27 @@
                 changePlaylist(playlistId);
             }
         };
+                // دالة لإضافة عنصر جديد
+        function addNewItem() {
+            const itemName = document.getElementById('newItemName').value;
+            const itemId = document.getElementById('newItemId').value;
+
+            if (itemName && itemId) {
+                // حفظ العنصر في قاعدة البيانات
+                database.ref('items').push({
+                    name: itemName,
+                    id: itemId
+                }).then(() => {
+                    alert('تمت إضافة العنصر بنجاح!');
+                    document.getElementById('newItemName').value = '';
+                    document.getElementById('newItemId').value = '';
+                }).catch((error) => {
+                    console.error('Error adding item: ', error);
+                });
+            } else {
+                alert('يرجى ملء جميع الحقول!');
+            }
+        }
         function filterFunction() {
             var input, filter, content, txt, i;
             input = document.getElementById('filterBox');
