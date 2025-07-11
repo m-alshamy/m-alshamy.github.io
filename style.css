@@ -19,7 +19,7 @@ body {
 	text-align: right;
 	user-select: none;
 	margin: 0;
-	background-color: #f3f4f6; /* Light gray background for the entire page */
+	background-color: #000; /* Light gray background for the entire page */
 	display: flex; /* Use flexbox for main layout */
 	min-height: 100vh; /* Ensure body takes full viewport height */
 	flex-direction: column; /* Stack content vertically if needed */
@@ -292,7 +292,7 @@ details[open] .sidebar ul2::before {
 /* Main Content Area */
 .mainsection {
     flex-grow: 1; /* يسمح للقسم الرئيسي بأن يأخذ المساحة المتبقية */
-    background: #ffffff;
+    background: #1f2937;
     padding: 1.5rem;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     border-radius: 0.75rem;
