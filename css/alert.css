@@ -1,0 +1,141 @@
+/* Base Alert Styling */
+.custom-alert {
+    position: fixed;
+    top: 20px;
+    right: 20px; /* Position to the right for RTL layout */
+    transform: translateX(0%); /* No transform needed if using right */
+    color: white;
+    padding: 15px 20px; /* Adjusted padding */
+    border-radius: 8px; /* More rounded corners */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Softer, larger shadow */
+    z-index: 9999; /* Highest possible value */
+    display: flex; /* Use flexbox for icon and message alignment */
+    align-items: center;
+    gap: 10px; /* Space between icon and message */
+    opacity: 0;
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+    transform: translateY(-20px); /* Initial state for slide-in */
+    min-width: 250px; /* Minimum width for better appearance */
+}
+
+.custom-alert.show {
+    opacity: 1;
+    transform: translateY(0); /* Final state for slide-in */
+}
+
+/* Alert Icon Styling */
+.alert-icon {
+    font-size: 24px; /* Larger icon */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Alert Message Styling */
+.alert-message {
+    flex-grow: 1; /* Allow message to take available space */
+    font-size: 16px; /* Larger font size */
+}
+
+/* Line Timer (Progress Bar) Styling */
+.alert-progress {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 4px; /* Slightly thicker */
+    background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent white */
+    border-bottom-left-radius: 8px; /* Match alert border-radius */
+    border-bottom-right-radius: 8px;
+    transform-origin: left; /* Animation starts from left */
+    animation: progress-bar 3s linear forwards; /* Default 3s duration */
+}
+
+/* Keyframes for slide-in animation */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Keyframes for progress bar animation */
+@keyframes progress-bar {
+    from { width: 100%; }
+    to { width: 0%; }
+}
+
+/* Customizable Alert Types (Updated colors to match professional theme) */
+.custom-alert.normal {
+    background-color: #3b82f6; /* Blue for normal/info */
+    color: #ffffff;
+}
+
+.custom-alert.success {
+    background-color: #10b981; /* Green for success */
+    color: #ffffff;
+}
+
+.custom-alert.error {
+    background-color: #ef4444; /* Red for error */
+    color: #ffffff;
+}
+
+.custom-alert.warning {
+    background-color: #f59e0b; /* Orange for warning */
+    color: #ffffff;
+}
+
+/* Overlay Styling (if used for password protection, etc.) */
+#protect-overlay {
+    overflow: hidden; /* Prevent scrollbars */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black overlay */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10000; /* Higher than alerts */
+}
+
+#protect-overlay form {
+    background-color: #ffffff; /* White background for form */
+    padding: 30px; /* More padding */
+    border-radius: 12px; /* More rounded */
+    text-align: center;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3); /* Stronger shadow */
+}
+
+#protect-overlay input[type="password"] {
+    padding: 12px 15px; /* More padding */
+    margin-bottom: 15px;
+    border: 1px solid #d1d5db; /* Light gray border */
+    border-radius: 8px; /* More rounded */
+    width: 250px; /* Fixed width */
+    font-size: 16px;
+    text-align: right; /* Align text to right for Arabic */
+}
+
+#protect-overlay input[type="submit"] {
+    padding: 12px 25px; /* More padding */
+    background-color: #3b82f6; /* Blue button */
+    color: white;
+    border: none;
+    border-radius: 8px; /* More rounded */
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+
+#protect-overlay input[type="submit"]:hover {
+    background-color: #2563eb; /* Darker blue on hover */
+    transform: translateY(-2px); /* Slight lift effect */
+}
