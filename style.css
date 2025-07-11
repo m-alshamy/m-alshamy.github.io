@@ -157,22 +157,24 @@ ul {
 
 /* Main Layout Structure */
 .wrapAll {
-	display: flex; /* Use flexbox for sidebar and main content */
-	flex-direction: column; /* Default to column on small screens */
-	width: 100%;
-	flex-grow: 1; /* Allow it to take available height */
+    display: flex; /* تم إضافة Flexbox لإدارة تخطيط الشريط الجانبي والمحتوى الرئيسي */
+    flex-direction: column; /* الافتراضي: تكديس عمودي على الشاشات الصغيرة */
+    width: 100%;
+    flex-grow: 1; /* يسمح للحاوية بأن تأخذ الارتفاع المتاح */
+    padding: 1rem; /* إضافة مسافة بادئة حول الحاوية بأكملها */
+    gap: 1rem; /* مسافة بين الشريط الجانبي والمحتوى الرئيسي */
 }
 
 /* Sidebar */
 .sidebar {
-	background-color: #1f2937; /* Dark gray background */
-	color: #e0e0e0; /* Light text color */
-	padding: 1.5rem; /* Increased padding */
-	width: 100%; /* Full width on small screens */
-	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Soft shadow */
-	border-radius: 0.75rem; /* Rounded corners */
-	margin: 1rem; /* Margin on small screens */
-	flex-shrink: 0; /* Prevent shrinking */
+    background-color: #1f2937;
+    color: #e0e0e0;
+    padding: 1.5rem;
+    width: 100%; /* عرض كامل على الشاشات الصغيرة */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    border-radius: 0.75rem;
+    flex-shrink: 0; /* منع الانكماش */
+    /* تم إزالة float و position: absolute للسماح لـ Flexbox بإدارة الارتفاع */
 }
 
 .sidebar .logo {
@@ -289,14 +291,14 @@ details[open] .sidebar ul2::before {
 
 /* Main Content Area */
 .mainsection {
-	flex-grow: 1; /* Allow main section to take remaining space */
-	background: #ffffff; /* White background */
-	padding: 1.5rem; /* Increased padding */
-	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Soft shadow */
-	border-radius: 0.75rem; /* Rounded corners */
-	margin: 1rem; /* Margin on small screens */
-	display: flex;
-	flex-direction: column;
+    flex-grow: 1; /* يسمح للقسم الرئيسي بأن يأخذ المساحة المتبقية */
+    background: #ffffff;
+    padding: 1.5rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 0.75rem;
+    display: flex;
+    flex-direction: column;
+    /* تم إزالة margin-left حيث يتم الآن إدارة المسافة بواسطة gap في .wrapAll */
 }
 
 /* Header Links (User Name and Fullscreen Button) */
@@ -402,7 +404,7 @@ details[open] .sidebar ul2::before {
 
 /* Article Section (Iframe Container) */
 .article {
-	flex-grow: 1; /* Allow article to take remaining vertical space */
+	flex-grow: 0; /* Allow article to take remaining vertical space */
 	padding: 0; /* Remove padding here, iframe will handle its own padding */
 	border: none; /* Remove borders, iframe will have its own styling */
 	background: #ffffff; /* White background */
@@ -415,7 +417,7 @@ details[open] .sidebar ul2::before {
 .article iframe {
 	width: 100%;
 	height: 90%;
-	min-height: 500px; /* Minimum height for iframe */
+	min-height: 600px; /* Minimum height for iframe */
 	border: 1px solid #d1d5db; /* Light border for iframe */
 	border-radius: 0.5rem; /* Rounded corners for iframe */
 	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for iframe */
@@ -423,6 +425,7 @@ details[open] .sidebar ul2::before {
 
 /* Page Footer */
 .pagefooter {
+
 	text-align: center;
 	padding: 2rem 0; /* More padding */
 	font-size: 0.875rem; /* Slightly larger font */
@@ -445,24 +448,21 @@ details[open] .sidebar ul2::before {
 
 /* Responsive Adjustments */
 @media screen and (min-width: 768px) { /* Medium screens and up */
-	.wrapAll {
-		flex-direction: row; /* Sidebar and main content side-by-side */
-		padding: 1.5rem; /* Add padding to the whole wrapper */
-		gap: 1.5rem; /* Space between sidebar and main content */
-	}
-	.sidebar {
-		width: 16rem; /* Fixed width for sidebar on larger screens */
-		margin: 0; /* Remove margin */
-		border-radius: 0.75rem; /* Ensure rounded corners */
-	}
-	.mainsection {
-		margin: 0; /* Remove margin */
-		border-radius: 0.75rem; /* Ensure rounded corners */
-	}
-	.tabs {
-		flex-direction: row; /* Tabs side-by-side */
-		align-items: center;
-	}
+    .wrapAll {
+        flex-direction: row; /* الشريط الجانبي والمحتوى الرئيسي جنبًا إلى جنب */
+        /* تم إزالة padding و gap من هنا حيث يتم الآن تطبيقها على .wrapAll الرئيسي */
+    }
+    .sidebar {
+        width: 16rem; /* عرض ثابت للشريط الجانبي على الشاشات الأكبر */
+        /* تم إزالة margin حيث يتم الآن إدارته بواسطة gap في .wrapAll */
+    }
+    .mainsection {
+        /* تم إزالة margin حيث يتم الآن إدارته بواسطة gap في .wrapAll */
+    }
+    .tabs {
+        flex-direction: row; /* الألسنة جنبًا إلى جنب */
+        align-items: center;
+    }
 }
 
 @media screen and (max-width: 767px) { /* Small screens (mobile) */
