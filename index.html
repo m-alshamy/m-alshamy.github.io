@@ -1,0 +1,145 @@
+<!doctype html>
+<html class="no-js" lang="ar" dir="rtl">
+    <head>
+		<title>ارشيف شخصي - محمد الشامي</title>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="robots" content="index, follow">
+	<meta name="language" content="Arabic">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+       		 <!-- Place favicon.ico in the root directory -->
+	<link rel="icon" href="computer.ico">
+        	<!-- External CSS files -->
+        <link rel="stylesheet" href="style.css">
+		<!-- Note: hover-effect.css and style2.css are no longer needed as their styles are merged into style.css -->
+	<link rel="stylesheet" href="css/stamps.css">
+	<link rel="stylesheet" href="css/alert.css">
+		<!-- Font Awesome for icons (CDN) -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    </head>
+    <body>
+		<!-- Custom Alert Container -->
+		<div id="customAlert" class="custom-alert">
+			<div class="alert-icon"></div>
+			<div class="alert-message"></div>
+			<div class="alert-progress"></div> <!-- الخط السفلي (العداد) -->
+		</div>
+
+		<!-- Main Wrapper -->
+		<div class="wrapAll clearfix">
+			<!-- Sidebar -->
+			<div class="sidebar">
+				<div class="logo">
+					<a href="/"><img src='https://i.ibb.co/y9WJCst/alshamy-logo-gold.png' alt="شعار الشامي"></a>
+				</div>
+				<div class="navigation">
+					<!-- Search Box -->
+					<input size="7" type="text" id="filterBox" placeholder="ابحث هنا" oninput="filterFunction()">
+					<button id='fullscreen-btn'>
+						<i class="fas fa-expand"></i> <!-- الأيقونة الافتراضية -->
+					</button>
+
+					<!-- Navigation Sections -->
+					<div class="sections">
+						<h3>الرقميات</h3>
+						<ul>
+							<details>
+								<summary><ul2>روابط</ul2></summary>
+								<li><sc2><a href="/?page=torrents">ارشيف التورنت</a></sc2></li>
+								<li><sc2><a href="/?page=dlinks">انترنت مظلم</a></sc2></li>
+								<li><sc2><a href="/?page=sites">مواقع مفيدة</a></sc2></li>
+							</details>
+							<details>
+								<summary><ul2>برمجيات</ul2></summary>
+								<li><sc2><a href="/?page=progs">برامج</a></sc2></li>
+							</details>
+							<details>
+								<summary><ul2>ملفات</ul2></summary>
+								<li><sc2><a href="#">ملفات نصية</a></sc2></li>
+								<li><sc2><a href="#">ملفات اصلاح</a></sc2></li>
+							</details>
+						</ul>
+
+						<h3>الترفيه</h3>
+						<ul>
+							<details>
+								<summary><ul2>افلام</ul2></summary>
+								<li><sc2><a href="/?page=movies">افلامي</a></sc2></li>
+							</details>
+							<details>
+								<summary><ul2>العاب</ul2></summary>
+								<li><sc2><a href="/?page=games">العابي</a></sc2></li>
+							</details>
+						</ul>
+
+						<h3>شخصي</h3>
+						<ul>
+							<details>
+								<summary><ul2>وسائط</ul2></summary>
+								<li><sc2><a href="/?page=books">مكتبتي</a></sc2></li>
+								<li><sc2><a href="#">ملفاتي</a></sc2></li>
+								<li><sc2><a href="#">صور</a></sc2></li>
+								<li><sc2><a href="#">صوت</a></sc2></li>
+								<li><sc2><a href="#">خاص</a></sc2></li>
+							</details>
+							<details>
+								<summary><ul2>مشاريعي</ul2></summary>
+								<li><sc2><a href="#">مواقع ويب</a></sc2></li>
+								<li><sc2><a href="/?page=mytools">ادواتي</a></sc2></li>
+							</details>
+							<details>
+								<summary><ul2>بناء الذات</ul2></summary>
+								<li><sc2><a href="/?page=war">حرب القوة</a></sc2></li>
+							</details>
+							<details>
+								<summary><ul2>اسلامي</ul2></summary>
+								<li><sc2><a href="/?page=islam">محاضرات</a></sc2></li>
+							</details>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+			<!-- Main Content Section -->
+			<div class="mainsection">
+				<!-- Tabs Section -->
+				<div class="tabs clearfix">
+					<div class="tabsLeft">
+						<ul>
+							<li><a href="#">القسم الخاص</a></li>
+						</ul>
+					</div>
+					<div class="tabsRight">
+						<ul>
+							<li><a class="goframe" onclick="openInNewTab()" >ادخل للاطار</a></li>
+						</ul>
+					</div>
+				</div>
+
+				<!-- Article Section with Iframe -->
+				<div class="article">
+					<iframe src="" id="frame" name="targetframe" allowTransparency="true" scrolling="yes" frameborder="1" fullscreen="no" ></iframe>
+				</div>
+
+				<!-- Page Footer -->
+				<div class="pagefooter">
+					تم اخر تعديل لهذا الموقع في يوم 28 من رجب لعام 1446
+					<div class="footerlinks">
+						<a href="#">الخصوصية</a> <a href="#">عن المطور</a> <a href="#">ملفات تعريف الارتباط</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- JavaScript Libraries -->
+        <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
+		<script src="js/vendor/modernizr-2.8.3.min.js"></script>
+
+        <!-- Our Separated JavaScript Files -->
+		<script src="js/alert.js"></script>
+		<script src="js/fullscreen.js"></script>
+		<script src="js/searchbox.js"></script>
+		<script src="script.js"></script>
+    </body>
+</html>
